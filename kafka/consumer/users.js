@@ -7,7 +7,7 @@ const options = { autoCommit: false, fetchMaxWaitMs: 1000, fetchMaxBytes: 1024 *
 const consumer = new kafka.Consumer(client, topics, options)
 const offset = new kafka.Offset(client)
 
-console.log(`Consume ${topicName} ready!`)
+console.log(`Kafka ${topicName} topic ready..`)
 
 consumer.on('message', function (message) {
   console.log(`consume - ${JSON.stringify(message)}`)
